@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="dockerjava:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="dockerjava-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="dockerjava:war exploded" />
+    </root>
+  </artifact>
+</component>
