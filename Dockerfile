@@ -4,32 +4,6 @@ FROM tomcat:8.5.4-jre8
 MAINTAINER Gary A. Stafford <garystafford@rochester.rr.com>
 ENV REFRESHED_AT 2016-09-17
 
-ENV MAVEN_VERSION 3.3.9
-
-RUN mkdir -p /usr/share/maven \
-  && curl -fsSL http://apache.osuosl.org/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz \
-    | tar -xzC /usr/share/maven --strip-components=1 \
-  && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-
-ENV MAVEN_HOME /usr/share/maven
-
-VOLUME /root/.m2
-
-
-WORKDIR /code
-
-# Prepare by downloading dependencies
-COPY src/ /code/src/
-RUN ls -la /code/src/main/webapp/*
-
-ADD pom.xml /code/pom.xml
-RUN ["mvn", "dependency:resolve"]
-RUN ["mvn", "verify"]
-
-# Adding source, compile and package into a fat jar
-
-RUN ["mvn", "package"]
-
 ADD target/dockerjava-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/
 
 ENV TERM xterm
