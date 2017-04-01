@@ -4,3 +4,15 @@ services:
     build: .
     ports:
      - 8081:8080
+    hostname: app
+  elk:
+    image: sebp/elk:latest
+    ports:
+    - 5601:5601
+    - 9200:9200
+    - 5044:5044
+    - 5000:5000
+    volumes:
+       - /var/lib/elasticsearch
+    hostname: elk
+    container_name: elk
