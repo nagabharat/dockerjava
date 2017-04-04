@@ -18,7 +18,7 @@ filebeat:
     -
       paths:
         - /var/log/spring-music.log
-      document_type: log4j
+      document_type: log
       multiline:
         pattern: '^[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}'
         negate: true
