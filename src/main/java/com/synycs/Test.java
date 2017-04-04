@@ -14,6 +14,7 @@ public class Test {
     public List<String> getAll(){
         logger.info("got info");
         logger.info("got info about all");
+        logger.error("error {}",new Exception());
       return Arrays.asList("naga","bharat");
     }
 }
