@@ -13,6 +13,7 @@ public class Test {
     private static final Logger logger= LoggerFactory.getLogger(Test.class);
     public List<String> getAll(){
         logger.info("got info");
+        logger.info("got info about all");
       return Arrays.asList("naga","bharat");
     }
 }
