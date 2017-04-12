@@ -12,36 +12,36 @@
             <pattern>%d{yyyy-MM-dd} %d{HH:mm:ss.SSS} %X{req.remoteHost} %X{req.requestURI} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
-    <appender name="STASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-        <destination>elk:5000</destination>
+    <!--<appender name="STASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">-->
+        <!--<destination>elk:5000</destination>-->
 
-        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
-            <providers>
-                <mdc/> <!-- MDC variables on the Thread will be written as JSON fields-->
-                <context/> <!--Outputs entries from logback's context -->
-                <version/> <!-- Logstash json format version, the @version field in the output-->
-                <logLevel/>
-                <loggerName/>
+        <!--<encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">-->
+            <!--<providers>-->
+                <!--<mdc/> &lt;!&ndash; MDC variables on the Thread will be written as JSON fields&ndash;&gt;-->
+                <!--<context/> &lt;!&ndash;Outputs entries from logback's context &ndash;&gt;-->
+                <!--<version/> &lt;!&ndash; Logstash json format version, the @version field in the output&ndash;&gt;-->
+                <!--<logLevel/>-->
+                <!--<loggerName/>-->
 
-                <pattern>
-                    <pattern> <!-- we can add some custom fields to be sent with all the log entries.-->
-                    {      <!--make filtering easier in Logstash-->
-                        "appName": "elk-testdata",
-                        "appVersion": "1.0"
-                        }
-                    </pattern>
-                </pattern>
+                <!--<pattern>-->
+                    <!--<pattern> &lt;!&ndash; we can add some custom fields to be sent with all the log entries.&ndash;&gt;-->
+                    <!--{      &lt;!&ndash;make filtering easier in Logstash&ndash;&gt;-->
+                        <!--"appName": "elk-testdata",-->
+                        <!--"appVersion": "1.0"-->
+                        <!--}-->
+                    <!--</pattern>-->
+                <!--</pattern>-->
 
-                <threadName/>
-                <message/>
+                <!--<threadName/>-->
+                <!--<message/>-->
 
-                <logstashMarkers/> <!-- Useful so we can add extra information for specific log lines as Markers-->
-                <arguments/> <!--or through StructuredArguments-->
+                <!--<logstashMarkers/> &lt;!&ndash; Useful so we can add extra information for specific log lines as Markers&ndash;&gt;-->
+                <!--<arguments/> &lt;!&ndash;or through StructuredArguments&ndash;&gt;-->
 
-                <stackTrace/>
-            </providers>
-        </encoder>
-    </appender>
+                <!--<stackTrace/>-->
+            <!--</providers>-->
+        <!--</encoder>-->
+    <!--</appender>-->
     <logger name="deng" level="DEBUG"/>
 
     <root level="INFO">
