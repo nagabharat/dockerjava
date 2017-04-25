@@ -10,6 +10,13 @@
     <packaging>war</packaging>
     <dependencies>
         <dependency>
+            <groupId>com.synycs.truck</groupId>
+            <artifactId>truck</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/webapp/WEB-INF/lib/truck-1.0.jar</systemPath>
+        </dependency>
+        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.25</version>
