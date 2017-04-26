@@ -1,6 +1,6 @@
 # Apache Tomcat image with build artifact
 
-FROM tomcat:8.5.4-jre8
+FROM tomcat:8.5.14-jre8
 MAINTAINER Gary A. Stafford <garystafford@rochester.rr.com>
 ENV REFRESHED_AT 2016-09-17
 
