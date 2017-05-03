@@ -17,8 +17,8 @@ public class ExamGroup {
     public ExamGroup(Tuple2<Integer,String> tuple2, List<Exam> exams){
         this.examGroupId=tuple2._1;
         this.examGroupName=tuple2._2;
-        this.mean=exams.stream().mapToDouble(Exam::getMark).
-                reduce((a,b)->a+b).getAsDouble();
+        this.mean=exams.stream().mapToDouble(Exam::getMark).average().
+                getAsDouble();
     }
     public String getExamGroupName() {
         return examGroupName;
@@ -44,5 +44,12 @@ public class ExamGroup {
         this.mean = mean;
     }
 
-
+    @Override
+    public String toString() {
+        return "ExamGroup{" +
+                "examGroupId=" + examGroupId +
+                ", examGroupName='" + examGroupName + '\'' +
+                ", mean=" + mean +
+                '}';
+    }
 }

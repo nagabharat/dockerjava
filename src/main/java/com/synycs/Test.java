@@ -37,19 +37,23 @@ public class Test {
         exam1.setSubjectId(1);
         Exam exam2=new Exam();
         exam2.setExamGroupId(2);
-        exam2.setExamGroupName("unit-1");
+        exam2.setExamGroupName("unit-2");
         exam2.setMark(10);
         exam2.setStudentId(1);
         exam2.setSubjectId(1);
         Exam exam3=new Exam();
         exam3.setExamGroupId(2);
-        exam3.setExamGroupName("unit-1");
+        exam3.setExamGroupName("unit-2");
         exam3.setMark(9);
         exam3.setStudentId(2);
         exam3.setSubjectId(1);
         List<Exam> exams=Arrays.asList(exam,exam1,exam2,exam3);
         Map<Integer,List<Exam>> examBySub= exams.stream().
                 collect(Collectors.groupingBy(Exam::getSubjectId));
+        List<Subject> subjects=examBySub.entrySet().stream().map(x->new Subject(x.getKey(),x.getValue())).
+                collect(Collectors.toList());
+
+        subjects.forEach(System.out::println);
 
 
     }
