@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target/dockerjava-1.0-SNAPSHOT/WEB-INF/lib/jackson-annotations-2.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/dockerjava-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/dockerjava-1.0-SNAPSHOT/WEB-INF/lib/logback-core-1.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/dockerjava-1.0-SNAPSHOT/WEB-INF/lib/truck-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/dockerjava-1.0-SNAPSHOT/WEB-INF/lib/logback-classic-1.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/dockerjava-1.0-SNAPSHOT/WEB-INF/lib/logstash-logback-encoder-4.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/dockerjava-1.0-SNAPSHOT/WEB-INF/lib/slf4j-ext-1.7.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/dockerjava-1.0-SNAPSHOT/WEB-INF/lib/jackson-databind-2.6.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/dockerjava-1.0-SNAPSHOT/WEB-INF/lib/jackson-core-2.6.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
